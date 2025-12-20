@@ -1,14 +1,33 @@
-# Chatwoot SDK (TypeScript)
+# Chatwoot SDK (TypeScript, ESM)
 
-SDK TypeScript (ESM) para consumir a API do Chatwoot.
+TypeScript SDK (ESM) to consume the Chatwoot API.
 
-## Instalação (git + tag)
+## Highlights
+
+- ESM-first package with TypeScript typings
+- Typed resources for Chatwoot endpoints (Application API + Client API)
+- Test suite (Jest) to validate request URLs/methods/headers
+
+## Requirements
+
+- Node.js (recommended: Node 20+)
+- This package is ESM (`"type": "module"`)
+
+## Installation
+
+### From npm
+
+```bash
+yarn add @linkiez/chatwoot-sdk
+```
+
+### From GitHub (git + tag)
 
 ```bash
 yarn add @linkiez/chatwoot-sdk@github:linkiez/ChatwootSDK#v1.0.0
 ```
 
-## Uso
+## Usage
 
 ```ts
 import { ChatwootClient } from '@linkiez/chatwoot-sdk';
@@ -23,6 +42,17 @@ const me = await client.profile.get();
 
 ## Scripts
 
-- `yarn build`
 - `yarn test`
+- `yarn build`
+- `yarn typecheck`
 - `yarn release` (semantic-release)
+
+## Release workflow
+
+Releases are automated via `semantic-release` on pushes to:
+
+- `main` (stable)
+- `beta` (prerelease)
+- `alpha` (prerelease)
+
+The GitHub Actions workflow runs build + release and publishes to npm.
