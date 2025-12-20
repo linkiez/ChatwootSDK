@@ -2,9 +2,16 @@ import { defineConfig } from 'tsup';
 
 export default defineConfig({
   entry: ['src/index.ts'],
-  format: ['esm'],
+  format: ['esm', 'cjs'],
   target: 'es2022',
   sourcemap: true,
   clean: true,
   dts: true,
+  outExtension({ format }) {
+    if (format === 'cjs') {
+      return { js: '.cjs' };
+    }
+
+    return { js: '.js' };
+  },
 });
