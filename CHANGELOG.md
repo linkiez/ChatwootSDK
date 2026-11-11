@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/linkiez/ChatwootSDK/compare/v1.0.2...v1.0.3) (2026-11-11)
+
+
+### Bug Fixes
+
+* **ci:** corrigir setup do Yarn 4 ([a65998b](https://github.com/linkiez/ChatwootSDK/commit/a65998b29c7d372a67ae963350d97b66b393f636))
+
 ## [1.0.2](https://github.com/linkiez/ChatwootSDK/compare/v1.0.1...v1.0.2) (2026-11-11)
 
 ## [1.0.1](https://github.com/linkiez/ChatwootSDK/compare/v1.0.0...v1.0.1) (2025-12-20)
