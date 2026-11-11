@@ -51,7 +51,7 @@
     [
       "@semantic-release/exec",
       {
-        "publishCmd": "npm publish --provenance --access public"
+        "publishCmd": "npm publish --registry=https://npm.pkg.github.com --access public"
       }
     ],
     [
